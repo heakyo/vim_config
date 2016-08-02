@@ -49,8 +49,8 @@ endif
 set number
 set relativenumber
 "set cursorline          " highlight line
-nmap <F1> :q!<CR>
-nmap <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q 
+nmap <F2> :q!<CR>
+nmap <F12> :ctags -R --c++-kinds=+p --fields=+iaS --extra=+q 
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
