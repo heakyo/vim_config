@@ -65,6 +65,8 @@ let Tlist_Exit_OnlyWindow=1
 
 " Quickfix
 set cscopequickfix=s-,c-,d-,i-,t-,e-
+nmap <F4> :cp<CR>
+nmap <F5> :cn<CR>
 
 " OmniCppComplete
 set nocp
