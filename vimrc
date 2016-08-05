@@ -48,9 +48,10 @@ endif
 "set mouse=a		" Enable mouse usage (all modes)
 set number
 set relativenumber
+set ts=4
 "set cursorline          " highlight line
 nmap <F2> :q!<CR>
-nmap <F12> :ctags -R --c++-kinds=+p --fields=+iaS --extra=+q 
+nmap <C-p> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
