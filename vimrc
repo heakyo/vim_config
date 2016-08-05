@@ -83,9 +83,12 @@ nmap <F9> :NERDTreeToggle<CR>
 " mini buffer related
 let g:miniBufExplMapWindowNavVim = 1   
 let g:miniBufExplMapWindowNavArrows = 1   
-let g:miniBufExplMapCTabSwitchBufs = 1   
-let g:miniBufExplModSelTarget = 1  
+let g:miniBufExplMapCTabSwitchBufs = 1   " open the selected file
+let g:miniBufExplModSelTarget = 1
 let g:miniBufExplMoreThanOne = 0
 
 " grep
 nnoremap <silent> <F3> :Grep<CR>
+
+" switch file between c/h
+nmap <S-A> :A<CR>
