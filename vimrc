@@ -68,6 +68,10 @@ function! ClosePair(char)
 endfunction
 nmap <F2> :q!<CR>
 nmap <C-p> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q
+nmap w= :resize +3<CR>
+nmap w- :resize -3<CR>
+nmap w, :vertical resize -3<CR>
+nmap w. :vertical resize +3<CR>
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
