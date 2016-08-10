@@ -108,3 +108,12 @@ nnoremap <silent> <F3> :Grep<CR>
 
 " switch file between c/h
 nmap <S-A> :A<CR>
+
+" Source Explorer
+nmap <F12> :SrcExplToggle<CR>
+let g:SrcExpl_winHeight = 12
+let g:SrcExpl_refreshTime = 100
+let g:SrcExpl_jumpKey = "<ENTER>"
+let g:SrcExpl_gobackKey = "<SPACE>" 
+let g:SrcExpl_isUpdateTags = 0 
+
