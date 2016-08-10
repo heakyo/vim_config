@@ -50,6 +50,7 @@ set number
 set relativenumber
 set ts=4
 "set cursorline          " highlight line
+" auto bracket completion
 :inoremap ( ()<ESC>i
 :inoremap ) <c-r>=ClosePair(')')<CR>
 :inoremap { {<CR>}<ESC>O
