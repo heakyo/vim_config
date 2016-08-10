@@ -50,6 +50,21 @@ set number
 set relativenumber
 set ts=4
 "set cursorline          " highlight line
+:inoremap ( ()<ESC>i
+:inoremap ) <c-r>=ClosePair(')')<CR>
+:inoremap { {<CR>}<ESC>O
+:inoremap } <c-r>=ClosePair('}')<CR>
+:inoremap [ []<ESC>i
+:inoremap ] <c-r>=ClosePair(']')<CR>
+:inoremap " ""<ESC>i
+:inoremap ' ''<ESC>i
+function! ClosePair(char)
+    if getline('.')[col('.') - 1] == a:char
+        return "\<Right>"
+    else
+        return a:char
+    endif
+endfunction
 nmap <F2> :q!<CR>
 nmap <C-p> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q
 
