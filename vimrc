@@ -49,6 +49,7 @@ endif
 set number
 set relativenumber
 set ts=4
+set hlsearch        " highlight the search patten
 "set cursorline          " highlight line
 " auto bracket completion
 :inoremap ( ()<ESC>i
@@ -72,6 +73,7 @@ nmap w= :resize +3<CR>
 nmap w- :resize -3<CR>
 nmap w, :vertical resize -3<CR>
 nmap w. :vertical resize +3<CR>
+nmap <S-p> :nohlsearch<CR>
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
