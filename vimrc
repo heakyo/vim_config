@@ -49,6 +49,7 @@ endif
 set number
 set relativenumber
 set ts=4
+set nocscopeverbose
 "set cursorline          " highlight line
 " auto bracket completion
 :inoremap ( ()<ESC>i
