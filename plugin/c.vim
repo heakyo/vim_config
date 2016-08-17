@@ -2602,8 +2602,8 @@ function! s:CreateAdditionalMaps ()
 	noremap  <buffer>  <silent>  <A-F9>       :call C_Compile()<CR>:call C_HlMessage()<CR>
 	inoremap <buffer>  <silent>  <A-F9>  <C-C>:call C_Compile()<CR>:call C_HlMessage()<CR>
 	"
-	noremap  <buffer>  <silent>    <F9>       :call C_Link()<CR>:call C_HlMessage()<CR>
-	inoremap <buffer>  <silent>    <F9>  <C-C>:call C_Link()<CR>:call C_HlMessage()<CR>
+	" noremap  <buffer>  <silent>    <F9>       :call C_Link()<CR>:call C_HlMessage()<CR>
+	" inoremap <buffer>  <silent>    <F9>  <C-C>:call C_Link()<CR>:call C_HlMessage()<CR>
 	"
 	noremap  <buffer>  <silent>  <C-F9>       :call C_Run()<CR>
 	inoremap <buffer>  <silent>  <C-F9>  <C-C>:call C_Run()<CR>
