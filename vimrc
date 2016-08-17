@@ -109,7 +109,7 @@ let g:SuperTabDefaultCompletionType="context"
 
 " NERDTree
 let NERDTreeWinPos = "right"
-nmap <F10> :NERDTreeToggle<CR>
+nmap <F9> :NERDTreeToggle<CR>
 
 
 " mini buffer related
