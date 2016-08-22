@@ -45,12 +45,13 @@ endif
 "set incsearch		" Incremental search
 "set autowrite		" Automatically save before commands like :next and :make
 "set hidden		" Hide buffers when they are abandoned
-"set mouse=a		" Enable mouse usage (all modes)
+set mouse=a		" Enable mouse usage (all modes)
 set number
 set relativenumber
 set ts=4
 set nocscopeverbose
 set hlsearch        " highlight the search patten
+set autoindent
 "set cursorline          " highlight line
 " auto bracket completion
 :inoremap ( ()<ESC>i
@@ -69,12 +70,22 @@ function! ClosePair(char)
     endif
 endfunction
 nmap <F2> :q!<CR>
-nmap <C-p> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q
+nmap <C-p> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
+nmap <C-o> :!cscope -Rbq
 nmap w= :resize +3<CR>
 nmap w- :resize -3<CR>
 nmap w, :vertical resize -3<CR>
 nmap w. :vertical resize +3<CR>
+set hlsearch        " highlight the search patten
 nmap <S-p> :nohlsearch<CR>
+
+" colorscheme
+" set background=dark
+set t_Co=256
+" colorscheme solarized
+" colorscheme desert
+colorscheme darkblue
+" colorscheme murphy
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
@@ -90,10 +101,12 @@ let Tlist_Exit_OnlyWindow=1
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 nmap <F4> :cp<CR>
 nmap <F5> :cn<CR>
+" nmap <C-t> :colder<CR>:cc<CR>
 
 " OmniCppComplete
 set nocp
 filetype plugin on
+set completeopt=menu " close preview window
 
 " superTab
 let g:SuperTabDefaultCompletionType="context"
