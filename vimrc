@@ -48,20 +48,21 @@ endif
 set mouse=a		" Enable mouse usage (all modes)
 set number
 set relativenumber
-set ts=4
+set ts=8
 set nocscopeverbose
 set hlsearch        " highlight the search patten
 set autoindent
 "set cursorline          " highlight line
 " auto bracket completion
-":inoremap ( ()<ESC>i
-":inoremap ) <c-r>=ClosePair(')')<CR>
+:inoremap ( ()<ESC>i
+:inoremap ) <c-r>=ClosePair(')')<CR>
 :inoremap { {<CR>}<ESC>O
 :inoremap } <c-r>=ClosePair('}')<CR>
-":inoremap [ []<ESC>i
-":inoremap ] <c-r>=ClosePair(']')<CR>
-":inoremap " ""<ESC>i
-":inoremap ' ''<ESC>i
+:inoremap [ []<ESC>i
+:inoremap ] <c-r>=ClosePair(']')<CR>
+:inoremap " ""<ESC>i
+:inoremap ' ''<ESC>i
+:inoremap < <><ESC>i
 function! ClosePair(char)
     if getline('.')[col('.') - 1] == a:char
         return "\<Right>"
