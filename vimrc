@@ -52,6 +52,7 @@ set ts=8
 set nocscopeverbose
 set hlsearch        " highlight the search patten
 set autoindent
+set incsearch
 "set cursorline          " highlight line
 " auto bracket completion
 :inoremap ( ()<ESC>i
