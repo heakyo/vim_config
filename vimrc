@@ -138,3 +138,36 @@ let g:SrcExpl_jumpKey = "<ENTER>"
 let g:SrcExpl_gobackKey = "<SPACE>" 
 let g:SrcExpl_isUpdateTags = 0 
 
+" Vundle manage
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'scrooloose/nerdtree'
+"Plugin 'majutsushi/tagbar' " Tag bar"
+"Plugin 'Xuyuanp/nerdtree-git-plugin'
+"Plugin 'jistr/vim-nerdtree-tabs'
+"Plugin 'vim-airline/vim-airline' | Plugin 'vim-airline/vim-airline-themes' " Status line"
+"Plugin 'jiangmiao/auto-pairs'
+"Plugin 'mbbill/undotree'
+"Plugin 'gdbmgr'
+"Plugin 'scrooloose/nerdcommenter'
+"Plugin 'Yggdroot/indentLine' " Indentation level"
+"Plugin 'bling/vim-bufferline' " Buffer line"
+"Plugin 'kepbod/quick-scope' " Quick scope
+"Plugin 'yianwillis/vimcdoc'
+"Plugin 'nelstrom/vim-visual-star-search'
+"Plugin 'ludovicchabant/vim-gutentags'
+"Plugin 'w0rp/ale'
+"Plugin 'mbbill/echofunc'
+"Plugin 'Yggdroot/LeaderF', { 'do': './install.sh' }
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
