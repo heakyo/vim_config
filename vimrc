@@ -41,8 +41,8 @@ endif
 "set showcmd		" Show (partial) command in status line.
 "set showmatch		" Show matching brackets.
 "set ignorecase		" Do case insensitive matching
-"set smartcase		" Do smart case matching
-"set incsearch		" Incremental search
+set smartcase		" Do smart case matching
+set incsearch		" Incremental search
 "set autowrite		" Automatically save before commands like :next and :make
 "set hidden		" Hide buffers when they are abandoned
 set mouse=a		" Enable mouse usage (all modes)
@@ -52,7 +52,6 @@ set ts=8
 set nocscopeverbose
 set hlsearch        " highlight the search patten
 set autoindent
-set incsearch
 "set cursorline          " highlight line
 " auto bracket completion
 :inoremap ( ()<ESC>i
@@ -164,10 +163,25 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugin 'yianwillis/vimcdoc'
 "Plugin 'nelstrom/vim-visual-star-search'
 "Plugin 'ludovicchabant/vim-gutentags'
-"Plugin 'w0rp/ale'
+Plugin 'w0rp/ale'
 "Plugin 'mbbill/echofunc'
 "Plugin 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" ALE
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = 'w'
+let g:ale_statusline_format = ['✗ %d', '⚡ %d', '✔ OK']
+let g:ale_echo_msg_format = '[%linter%] %code: %%s'
+let g:ale_lint_on_text_changed = 'normal'
+let g:ale_lint_on_insert_leave = 1
+"let g:airline#extensions#ale#enabled = 1
+let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
+let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++14'
+let g:ale_c_cppcheck_options = ''
+let g:ale_cpp_cppcheck_options = ''
+
